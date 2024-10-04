@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .layout{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+            
+            
+        }
+        .pri,.pro,.basic{
+            background-color: aliceblue;
+            width: 300px;
+            height: 400px;
+                        
+            
+            
+            
+            flex-direction: row;
+            
+        }
+        .inner{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: xx-large;
+        }
+        button{
+            background-color: rgb(37, 141, 37);
+            color: aliceblue;
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="basic">
+            <div class="inner"><b>Basic</b></div>
+            <div class="inner">$10/ month</div>
+            <div class="inner">Feature 1</div>
+            <div class="inner">Feature 2</div>
+            <div class="inner">
+                <button class="inner">Sign Up</button>
+            </div>
+            
+        </div>
+        <div class="pri">
+            <div class="inner"><b>Premium</b></div>
+            <div class="inner">$30/ month</div>
+            <div class="inner">Feature 1</div>
+            <div class="inner">Feature 2</div>
+            <div class="inner">Feature 3</div>
+            <div class="inner"><button class="inner">Sign Up</button></div>
+            
+        </div>
+        <div class="pro">
+            <div class="inner"><b>Pro</b></div>
+            <div class="inner">$50/ month</div>
+            <div class="inner">Feature 1</div>
+            <div class="inner">Feature 2</div>
+            <div class="inner">Feature 3</div>
+            <div class="inner">Feature 4</div>
+            <div class="inner"><button class="inner">Sign Up</button></div>
+        </div>
+        
+    </div>
+</body>
+</html>
