@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 body{
-    background-color: aqua;
+    background-color: rgb(157, 170, 170);
 }
 
 #heading{
     background-color: blueviolet;
     font-size: 50px;
-    border-color: brown;
+    border-color: rgb(239, 156, 156);
     border-width: 4px;
     border-style: dotted;
     border-radius: 12px;
