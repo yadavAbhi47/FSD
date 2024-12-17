@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import MainLayout from './components/MainLayout'
-import Registration from './components/Registration'
-import Dashboard from './components/Dashboard'
-import Login from './components/Login'
+// import  { useState } from 'react'
+// import { BrowserRouter, Routes, Route } from "react-router-dom"
+// import MainLayout from './components/MainLayout'
+// import Registration from './components/Registration'
+// import Dashboard from './components/Dashboard'
+// import Login from './components/Login'
+import UseRef from './components/UseRef'
 function App() {
-  const [store, setStore] = useState("");
+  // const [store, setStore] = useState("");
   return (
     <div>
-      {JSON.stringify(store)}
+      {/* {JSON.stringify(store)}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
@@ -19,8 +20,11 @@ function App() {
         <Routes>
           <Route path="/dash" element={<Dashboard />}></Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <UseRef />
     </div>
+
+
   )
 }
 export default App

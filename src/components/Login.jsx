@@ -1,33 +1,51 @@
-import React, { useState } from 'react'
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 function Login({ regDataLogin }) {
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const navigate = useNavigate();
+
   function verification(e) {
     e.preventDefault();
-    if (regDataLogin.email == email && regDataLogin.pwd == pwd) {
+    if (regDataLogin?.email === email && regDataLogin?.pwd === pwd) {
       alert("Login Successful");
       navigate("/dash");
     } else {
       alert("Login Failed");
     }
   }
+
   return (
     <div>
-      <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input onChange={(e) => { setEmail(e.target.value) }} type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+      <form onSubmit={verification}>
+        <div className="form-group">
+          <label htmlFor="inputEmail">Email address</label>
+          <input 
+            onChange={(e) => setEmail(e.target.value)} 
+            type="email" 
+            className="form-control" 
+            id="inputEmail" 
+            aria-describedby="emailHelp" 
+            placeholder="Enter email" 
+            required 
+          />
         </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input onChange={(e) => { setPwd(e.target.value) }} type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+        <div className="form-group">
+          <label htmlFor="inputPassword">Password</label>
+          <input 
+            onChange={(e) => setPwd(e.target.value)} 
+            type="password" 
+            className="form-control" 
+            id="inputPassword" 
+            placeholder="Password" 
+            required 
+          />
         </div>
-        <button onClick={verification} type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary">Submit</button>
       </form>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;
